@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    font-family: 微软雅黑;
+    
+}
+ol, ul ,li{list-style: none;} 
+html, body{
+    background-image: url("../images/longzhu.png");
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    background-color: whitesmoke;
+}
+a{color:#000000;text-decoration:none; }  
+a:hover{color:#BA2636;text-decoration:underline;} 
+

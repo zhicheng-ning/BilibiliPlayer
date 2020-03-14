@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>仿B站视频播放器</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/musicPlayer.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+
+<body>
+    <header>仿B站视频播放器</header>
+    <div class="address"><input type="text" id="videoUrl" placeholder="请输入视频的地址"><button type="button"
+            id="parseVideo" class="blue">加载视频</button></div>
+    <div id="psVideo" class="psVideo">
+        <video src="http://139.9.149.237/nzc/site01/videos/PopStar.mp4" class="my-psVideo" id="my-video"
+            poster="images/cover.jpg" preload="metadata">
+
+        </video>
+        <!-- loading图标 -->
+        <div class="psVideo-loading">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!-- 播放图标 -->
+        <div class="psVideo-play-one"></div>
+        <!-- 控制栏 -->
+        <div class="psVideo-shade psVideo-shade-on">
+            <div class="psVideo-play-footer">
+                <!-- 进度条 -->
+                <div class="psVideo-progress">
+                    <span class="psVideo-timeBar"></span>
+                </div>
+
+                <div class="psVideo-play-btn psVideo-stop"></div>
+                <!-- 视频时长 -->
+                <div class="psVideo-time">
+                    <span id="currentTime">00:00</span>
+                    <span>/</span>
+                    <span id="duration">00:00</span>
+                </div>
+                <!-- 弹幕发送框 -->
+                <div class="psVideo-dan">
+                    <input type="text" class="psVideo-dan-input" placeholder="点击输入弹幕,回车键发送" />
+                    <span class="psVideo-dan-btn">发送</span>
+                </div>
+                <!-- 全屏，循环，倍速，音量等等 -->
+                <div class="psVideo-right-btn">
+                    <div class="psVideo-btn all"></div>
+                    <div class="psVideo-btn loop" id="loop"></div>
+                    <div class="psVideo-btn set">
+                        <div class="set-list">
+                            <div class="play-speed">播放速度</div>
+                            <div class="play-speed-list">
+                                <span id="speed05Btn">X0.5</span>
+                                <span class="moren" id="speed1Btn">X1</span>
+                                <span id="speed2Btn">X2</span>
+                            </div>
+                        </div>
+                        <div class="konge1"></div>
+                    </div>
+                    <div class="psVideo-btn huazhi">自动</div>
+                    <div class="psVideo-btn sound" id="soundBtn">
+                        <div class="sound-list">
+                            <div class="sound-number">90</div>
+                            <div class="volume">
+                                <span class="volumeBar"></span>
+                            </div>
+                        </div>
+                        <div class="konge"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 视频列表 -->
+        <div class="player-list">
+            <div class="player-list-bk">
+                <div class="player-list-head">我的收藏</div>
+                <div class="player-list-cotent">
+                    <div class="player-list-box">
+                        <div class="player-list-video video-now">KDA女团</div>
+                        <div class="player-list-video">告白之夜</div>
+                        <div class="player-list-video">红色高跟鞋</div>
+                        <div class="player-list-video">花海</div>
+                        <div class="player-list-video">起风了</div>
+                        <div class="player-list-video">渐渐被你吸引</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>@2020 author:逝不等琴生 <span><strong>8002117277+宁志成</strong></span></footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
